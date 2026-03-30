@@ -12,11 +12,10 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     "https://" + os.environ.get("RENDER_EXTERNAL_HOSTNAME"),
-    "https://frontendblog-s2uj.onrender.com"
+    
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://frontendblog-s2uj.onrender.com"
 ]
 
 MIDDLEWARE = [
