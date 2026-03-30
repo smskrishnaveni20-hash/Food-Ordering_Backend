@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-settings_module = 'Food_Ordering.deployemnt_settings' if "RENDER_EXTERNAL_HOSTNAME" in os.environ else "Food_Ordering.settings"
+settings_module = 'Food_Ordering.deployement_settings' if "RENDER_EXTERNAL_HOSTNAME" in os.environ else "Food_Ordering.settings"
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
 
