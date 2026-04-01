@@ -47,9 +47,11 @@ class RestaurantSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class DishSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField(required=False, allow_null=True)
     class Meta:
         model = Dishes
         fields = "__all__"
+
 
 class CartSerializer(serializers.ModelSerializer):
     class Meta:
