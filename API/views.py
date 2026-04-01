@@ -47,14 +47,19 @@ class RestaurantDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 class DishesView(generics.ListCreateAPIView):
     serializer_class = DishSerializer
+    
+    @api_view(['GET'])
+    def test_dishes(request):
+        dishes = list(Dishes.objects.all().values())
+        return Response(dishes)
 
-    def get_queryset(self):
-        # Safe: filters out any dishes with broken foreign keys
-        return Dishes.objects.filter(restaurant__isnull=False)
+    # def get_queryset(self):
+    #     # Safe: filters out any dishes with broken foreign keys
+    #     return Dishes.objects.filter(restaurant__isnull=False)
 
-    def perform_create(self, serializer):
-        # Optional: prevent broken relationships
-        serializer.save()
+    # def perform_create(self, serializer):
+    #     # Optional: prevent broken relationships
+    #     serializer.save()
 
 
 class DishesDetailView(generics.RetrieveUpdateDestroyAPIView):
