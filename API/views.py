@@ -33,8 +33,7 @@ class RestaurantDetailView(generics.RetrieveUpdateDestroyAPIView):
 # Dishes
 class DishesView(generics.ListCreateAPIView):
     serializer_class = DishSerializer
-    def get_queryset(self):
-        return Dishes.objects.filter(restaurant__isnull=False)
+    queryset = Dishes.objects.all()  
 
 class DishesDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Dishes.objects.all()
