@@ -83,7 +83,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = False
+DEBUG = True
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
 
 RENDER_HOST = os.environ.get("RENDER_EXTERNAL_HOSTNAME", "localhost")
