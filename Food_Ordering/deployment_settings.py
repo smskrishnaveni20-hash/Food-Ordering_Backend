@@ -89,8 +89,17 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key")
 RENDER_HOST = os.environ.get("RENDER_EXTERNAL_HOSTNAME", "localhost")
 ALLOWED_HOSTS = [RENDER_HOST]
 
-CSRF_TRUSTED_ORIGINS = [f"https://{RENDER_HOST}"]
-CORS_ALLOWED_ORIGINS = [f"https://{RENDER_HOST}"]
+CORS_ALLOWED_ORIGINS = [
+    f"https://{RENDER_HOST}",
+    "https://food-ordering-frontend-a3em.onrender.com",  # ✅ Add this
+    "https://food-ordering-frontend-qf0i.onrender.com",  # ✅ Add this
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    f"https://{RENDER_HOST}",
+    "https://food-ordering-frontend-a3em.onrender.com",  # ✅ Add this
+    "https://food-ordering-frontend-qf0i.onrender.com",  # ✅ Add this
+]
 CORS_ALLOW_CREDENTIALS = True
 
 INSTALLED_APPS = [
