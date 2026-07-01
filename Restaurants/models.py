@@ -4,7 +4,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 
 class Restaurants(models.Model):
-    Images = models.ImageField(upload_to="media",null=True, blank = True)
+    Image = models.ImageField(upload_to="media",null=True, blank = True)
     Restaurant_Name = models.CharField(max_length=35)
     Restaurant_Location = models.TextField(max_length=250)
     Mobile_Number = PhoneNumberField(max_length=20, default="000 000 0000")
