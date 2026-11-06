@@ -12,11 +12,20 @@ DEBUG = os.environ.get("DEBUG", "False").lower() in ("true", "1", "yes")
 SECRET_KEY = os.environ.get("SECRET_KEY", base_settings.SECRET_KEY)
 
 ALLOWED_HOSTS: list[str] = list(base_settings.ALLOWED_HOSTS)
+if ".onrender.com" not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append(".onrender.com")
+
+CSRF_TRUSTED_ORIGINS: list[str] = ["https://*.onrender.com"]
 RENDER_HOST = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
 if RENDER_HOST:
     if RENDER_HOST not in ALLOWED_HOSTS:
         ALLOWED_HOSTS.append(RENDER_HOST)
-    CSRF_TRUSTED_ORIGINS = [f"https://{RENDER_HOST}"]
+    render_origin = f"https://{RENDER_HOST}"
+    if render_origin not in CSRF_TRUSTED_ORIGINS:
+        CSRF_TRUSTED_ORIGINS.append(render_origin)
+
+if not os.environ.get("CORS_ALLOWED_ORIGINS"):
+    CORS_ALLOW_ALL_ORIGINS = True
 
 DATABASES: dict[str, Any] = dict(base_settings.DATABASES)
 database_url = os.environ.get("DATABASE_URL", "").strip().strip("'\"")

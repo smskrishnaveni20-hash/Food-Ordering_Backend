@@ -71,9 +71,14 @@ cors_origins_env = os.environ.get("CORS_ALLOWED_ORIGINS")
 if cors_origins_env:
     CORS_ALLOWED_ORIGINS = [o.strip() for o in cors_origins_env.split(",") if o.strip()]
 else:
+    CORS_ALLOW_ALL_ORIGINS = True
     CORS_ALLOWED_ORIGINS = [
         'http://localhost:5173',
         'http://127.0.0.1:5173',
+        'http://localhost:5174',
+        'http://127.0.0.1:5174',
+        'http://localhost:3000',
+        'http://127.0.0.1:3000',
     ]
 
 CORS_ALLOW_CREDENTIALS = True
