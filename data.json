@@ -1,0 +1,74 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$5zDYAW0EIluQS4McpzBVcG$5zWaK38ctFXj8P/1cpIB7dHbbR4BUYqC6hSeDNWEPYQ=",
+            "last_login": "2025-12-31T06:07:57.829Z",
+            "is_superuser": true,
+            "username": "Krishnaveni",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2025-12-31T06:06:59.479Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$NYYhfSveqKQUwhyCo2z9aX$vimIXbGQ0yGJKWO7RgeF5pgpyBJvE3v4sHdtzb0VIws=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Liju",
+            "first_name": "",
+            "last_name": "",
+            "email": "devanandahr2005@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2026-02-25T07:49:01.030Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$c72tXZefS9uFrn12hMFzSG$qU6u/9Q3FY5RRwzazmGL86Xmo7K5mE10GwUFPUpQAm4=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "ashin333@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2026-03-18T09:50:03.435Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$wdCKEa1F7C9oaBetJ2LLhb$h6rX5/MeJfQuFdfMUtRc53oVCUcYZ9P08aU86UQouq8=",
+            "last_login": "2026-09-04T04:40:19.462Z",
+            "is_superuser": true,
+            "username": "krishna",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2026-09-04T04:40:01.173Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

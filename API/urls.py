@@ -1,5 +1,18 @@
 from django.urls import path
-from .views import * 
+from .views import (
+    RegisterView,
+    LoginView,
+    RestaurantView,
+    RestaurantDetailView,
+    DishesView,
+    DishesDetailView,
+    AddToCartView,
+    ViewCartView,
+    ClearCartView,
+    OrderView,
+    MakePaymentView,
+    PaymentHistoryView,
+)
 
 urlpatterns = [
     # Authentication
@@ -18,6 +31,9 @@ urlpatterns = [
     path('api/v1/cart/add/', AddToCartView.as_view(), name='cart-add'),
     path('api/v1/cart/view/', ViewCartView.as_view(), name='cart-view'),
     path('api/v1/cart/clear/', ClearCartView.as_view(), name='cart-clear'),
+
+    # Orders
+    path('api/v1/orders/', OrderView.as_view(), name='orders'),
 
     # Payment
     path('api/v1/payment/make/', MakePaymentView.as_view(), name='payment-make'),
